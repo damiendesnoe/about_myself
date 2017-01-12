@@ -24,7 +24,7 @@ hr {
 
 nav {
 	position: fixed;
-	top: 50px;
+	top: 70px;
 }
 
 .list-group {
@@ -48,10 +48,18 @@ nav {
 	border-radius: 0 0 5px 0;
 }
 
-.list-group-item.active, .list-group-item.active:hover {
+.list-group-item.active {
 	background-color: #111;
-	border-color: #111;
-	border-left-color: #333; 
+	border-color: #222;
+	border-left-color: #333;
+}
+
+.list-group-item.active:hover, .list-group-item:hover {
+	background-color: #222;
+	border-color: #555;
+	border-left-color: #333;
+	cursor: pointer;
+	z-index: 3;
 }
 
 nav img {
