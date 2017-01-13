@@ -51,6 +51,8 @@ window.addEventListener('keydown', function (e) {
 				headerH2Element.textContent = reverse(reverseH2);
 				copyright = reverse(reverseCopyright);
 				copyrightElement.innerHTML = restoreTags(copyright);
+
+				k = 0;
 			}, 5000)
 		}
 	}
