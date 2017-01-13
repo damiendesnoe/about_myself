@@ -13,3 +13,5 @@ This page will be relatively simple, as it is just designed to introduce myself 
 Hope you will enjoy reading it !
 
 Damien
+
+PS: If you would to suggest me some corrections, modifications or some way to improve this work, please propose your changes on GitHub! ;)
