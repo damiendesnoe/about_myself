@@ -80,3 +80,46 @@ footer {
 	color: white;
 	text-align: center;
 }
+
+/* Konami code effects */
+body.reverse {
+	background-color: #FFF;
+}
+
+.container.reverse {
+	background-color: #333;
+	color: #FFF;
+}
+a.reverse {
+	color: #cc8548;
+}
+
+a.reverse:hover {
+	color: #dcad83;
+}
+
+hr.reverse {
+	border-top-color: #FFF;
+}
+
+.list-group-item.reverse {
+	background-color: #FFF;
+	border: 1px solid #DDD;
+	border-left-color: #FFF;
+}
+
+.list-group-item.active.reverse {
+	background-color: #DDD;
+	border-color: #EEE;
+	border-left-color: #FFF;
+}
+
+.list-group-item.active.reverse:hover, .list-group-item.reverse:hover {
+	background-color: #EEE;
+	border-color: #BBB;
+	border-left-color: #FFF;
+}
+
+footer.reverse {
+	color: #333;
+}
