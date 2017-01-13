@@ -3,7 +3,7 @@ var headerH2Element = document.querySelector('h2');
 var profileElement = document.getElementsByClassName('profile')[0];
 var enProfile = enProfileElement.innerHTML;
 var frProfile = frProfileElement.innerHTML;
-var copyright = document.querySelector('footer').querySelector('p');
+var copyrightElement = document.querySelector('footer').querySelector('p');
 
 var reverseEnTitle = reverse(enTitle);
 var reverseFrTitle = reverse(frTitle);
@@ -13,7 +13,7 @@ var reverseEnProfile = reverse(enProfile);
 	reverseEnProfile = restoreTags(reverseEnProfile);
 var reverseFrProfile = reverse(frProfile);
 	reverseFrProfile = restoreTags(reverseFrProfile);
-var reverseCopyright = reverse(copyright.innerHTML);
+var reverseCopyright = reverse(copyrightElement.innerHTML);
 	reverseCopyright = restoreTags(reverseCopyright);
 
 console.log(reverse(frTitle));

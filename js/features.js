@@ -19,7 +19,7 @@ window.addEventListener('keydown', function (e) {
 		if (k === code.length) {
 			headerH1Element.textContent = reverseH1;
 			headerH2Element.textContent = reverseH2;
-			copyright.innerHTML = reverseCopyright;
+			copyrightElement.innerHTML = reverseCopyright;
 
 			if (bodyElement.lang === 'en') {
 				titleElement.textContent = reverseEnTitle;
@@ -32,7 +32,26 @@ window.addEventListener('keydown', function (e) {
 
 			document.querySelectorAll('*').forEach(function (e) {
 				e.classList.add('reverse');
-			})
+			});
+
+			setTimeout(function () {
+				document.querySelectorAll('*').forEach(function (e) {
+					e.classList.remove('reverse');
+				});
+
+				if (bodyElement.lang === 'en') {
+					titleElement.textContent = enTitle;
+				} else {
+					titleElement.textContent = frTitle;
+				}
+				
+				frProfileElement.innerHTML = frProfile;
+				enProfileElement.innerHTML = enProfile;
+				headerH1Element.textContent = reverse(reverseH1);
+				headerH2Element.textContent = reverse(reverseH2);
+				copyright = reverse(reverseCopyright);
+				copyrightElement.innerHTML = restoreTags(copyright);
+			}, 5000)
 		}
 	}
 });
