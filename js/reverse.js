@@ -13,7 +13,8 @@ var reverseEnProfile = reverse(enProfile);
 	reverseEnProfile = restoreTags(reverseEnProfile);
 var reverseFrProfile = reverse(frProfile);
 	reverseFrProfile = restoreTags(reverseFrProfile);
-var reverseCopyright = reverse(copyright.textContent);
+var reverseCopyright = reverse(copyright.innerHTML);
+	reverseCopyright = restoreTags(reverseCopyright);
 
 console.log(reverse(frTitle));
 
@@ -26,16 +27,10 @@ function reverse(textToReverse) {
 }
 
 function restoreTags(textToRestore) {
-	var reverseTagRegex = />rb</g;
-	var reverseARegex = />a\/<(.{0,})>(.{0,})a\/?</g;
-	var restoredText;
-	var aList;
-	var reversedLink;
-	var linkUrl;
+	var reverseTagRegex = /(>\w+\/?<)(.*)(>.+<)/g;
 
-	textToRestore = textToRestore.replace(reverseBrRegex, '<br>');
-	textToRestore = textToRestore.replace(reverseARegex, function (match, p1, p2, string) {
-		return '<a' + reverse(p2) + '>' + p1 + '</a>';
+	textToRestore = textToRestore.replace(reverseTagRegex, function (match, p1, p2, p3, string) {
+		return reverse(p3) + p2 + reverse(p1);
 	});
 
 	return textToRestore;

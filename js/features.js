@@ -1,4 +1,3 @@
-
 var wPressed = false;
 var k = 0;
 
@@ -20,14 +19,15 @@ window.addEventListener('keydown', function (e) {
 		if (k === code.length) {
 			headerH1Element.textContent = reverseH1;
 			headerH2Element.textContent = reverseH2;
-			copyright.textContent = reverseCopyright;
+			copyright.innerHTML = reverseCopyright;
 
 			if (bodyElement.lang === 'en') {
 				titleElement.textContent = reverseEnTitle;
 				profileElement.innerHTML = reverseEnProfile;
-			} else {
+			} 
+			if (bodyElement.lang === 'fr') {
 				titleElement.textContent = reverseFrTitle;
-				profileElement = reverseFrProfile;
+				document.getElementsByClassName('profile')[0].innerHTML = reverseFrProfile;
 			}
 
 			document.querySelectorAll('*').forEach(function (e) {

@@ -76,6 +76,11 @@ img {
 	margin: 40px 0;
 }
 
+b {
+	display: block;
+	font-weight: bold;
+}
+
 footer {
 	color: white;
 	text-align: center;
@@ -90,11 +95,11 @@ body.reverse {
 	background-color: #333;
 	color: #FFF;
 }
-a.reverse {
+a.reverse, .reverse a {
 	color: #cc8548;
 }
 
-a.reverse:hover {
+a.reverse:hover, .reverse a:hover {
 	color: #dcad83;
 }
 
